@@ -1,0 +1,17 @@
+LIBRARY IEEE;
+USE IEEE.Std_Logic_1164.ALL;
+
+ENTITY modb IS
+	PORT (
+		C1 : IN STD_LOGIC;
+		C0 : IN STD_LOGIC;
+		B : IN STD_LOGIC;
+		R : OUT STD_LOGIC
+	);
+END modb;
+
+ARCHITECTURE arch OF modb IS
+BEGIN
+	R <= ((NOT C0) AND B) OR ((NOT B) AND C1);
+END arch;
+
